@@ -180,7 +180,7 @@
 <section>
   <h2 class="accent">Book a Cleaning</h2>
   <div class="booking">
-    <form action="mailto:amyscleanaura@gmail.com" method="POST" enctype="text/plain">
+    <form action="mailto:AmysAura@gmail.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <select name="service">
@@ -204,7 +204,7 @@
 <section>
   <h2 class="accent">Contact Us</h2>
   <div class="contact">
-    <form action="mailto:amyscleanaura@gmail.com" method="POST" enctype="text/plain">
+    <form action="mailto:AmysAura@gmail.com" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message"></textarea>
