@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amy’s Aura Cleaning Services | Professional & Reliable Cleaners UK</title>
+  <meta name="description" content="Amy’s Aura provides reliable, high-quality residential, commercial, Airbnb, and end-of-tenancy cleaning services across the UK. Trusted, flexible, and ready when you need us." />
+  <meta name="keywords" content="cleaning services UK, Airbnb cleaning, end of tenancy cleaning, office cleaning, professional cleaners" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Performance tweaks */
+    body { text-rendering: optimizeLegibility; }
+
+    :root {
+      --deep-blue: #1f3c5b;   /* reliability */
+      --soft-ivory: #f7f6f2;  /* cleanliness */
+      --champagne-gold: #c9a14a; /* elegance */
+      --charcoal: #2b2b2b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--soft-ivory);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--deep-blue);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 0.8rem;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .services, .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: white;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: var(--deep-blue);
+      margin-bottom: 0.8rem;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      color: var(--champagne-gold);
+      margin: 0.8rem 0;
+      font-weight: 600;
+    }
+
+    .accent {
+      color: var(--champagne-gold);
+      font-weight: 500;
+    }
+
+    .contact, .booking {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    form button {
+      background: var(--deep-blue);
+      color: white;
+      border: none;
+      padding: 0.9rem 1.6rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    form button:hover {
+      background: #162c43;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      border-radius: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--deep-blue);
+      color: white;
+      font-size: 0.9rem;
+    }
+  
+
+    /* Responsive refinements */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 3rem 1rem; }
+      .card { padding: 1.5rem; }
+      form button { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 2.5rem 1rem; }
+      header h1 { font-size: 1.9rem; }
+      header p { font-size: 0.95rem; }
+      h2 { font-size: 1.4rem; }
+      .services, .pricing, .contact, .booking {
+        grid-template-columns: 1fr;
+      }
+      .whatsapp {
+        width: 100%;
+      }
+    }
+  
+
+    /* Sticky WhatsApp button for mobile */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 0.9rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 999;
+      display: none;
+    }
+
+    .whatsapp-float:hover {
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float { display: inline-block; }
+    }
+  </style>
+  <!-- Google Analytics (replace G-XXXXXXXXXX with your ID when ready) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+<header>
+  <svg width="64" height="64" viewBox="0 0 64 64" aria-label="Amy’s Aura logo" role="img" style="margin-bottom:1rem">
+    <defs>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e2c26b"/>
+        <stop offset="100%" stop-color="#c9a14a"/>
+      </linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="30" fill="url(#goldGrad)" opacity="0.9"/>
+    <text x="32" y="38" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" fill="#1f3c5b">AA</text>
+  </svg>
+  <h1>Amy’s Aura</h1>
+  <p>Where cleanliness meets calm, care, and confidence</p>
+  <p style="margin-top:1rem;font-weight:500">
+    <a href="tel:+447904152313" style="color:#fff;text-decoration:none">📞 Call us: 07904 152313</a>
+  </p>
+</header>
+
+<section>
+  <h2 class="accent">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Residential Cleaning</h3>
+      <p>Gentle, thorough care for your living spaces, leaving every corner refreshed.</p>
+    </div>
+    <div class="card">
+      <h3>Office Cleaning</h3>
+      <p>Reliable cleaning that supports productivity and professionalism.</p>
+    </div>
+    <div class="card">
+      <h3>Deep Cleaning</h3>
+      <p>Detailed attention for moments when your space needs extra devotion.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="accent">Simple Pricing</h2>
+  <div class="pricing">
+    <div class="card">
+      <h3>Standard Clean</h3>
+      <p class="price">From £40</p>
+      <p>Ideal for regular upkeep and fresh living.</p>
+    </div>
+    <div class="card">
+      <h3>Deep Clean</h3>
+      <p class="price">From £80</p>
+      <p>Perfect for resets, move-ins, or seasonal cleaning.</p>
+    </div>
+    <div class="card">
+      <h3>Office Clean</h3>
+      <p class="price">Custom Quote</p>
+      <p>Tailored solutions for professional spaces.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="accent">Book a Cleaning</h2>
+  <div class="booking">
+    <form action="mailto:amyscleanaura@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="service">
+        <option>Residential Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Office Cleaning</option>
+      </select>
+      <input type="date" name="date" />
+      <textarea name="details" rows="4" placeholder="Tell us about your space"></textarea>
+      <button type="submit">Request Booking</button>
+    </form>
+
+    <div class="card">
+      <h3>Prefer WhatsApp?</h3>
+      <p>Message us directly for quick confirmations and questions.</p>
+      <a class="whatsapp" href="https://wa.me/447904152313" target="_blank">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="accent">Contact Us</h2>
+  <p style="margin-bottom:1.5rem"><strong>Opening hours:</strong><br>
+  Monday – Saturday: 8:00am – 8:00pm<br>
+  Sunday & urgent cleans: Available on request</p>
+  <div class="contact">
+    <form action="mailto:amyscleanaura@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Email</button>
+    </form>
+
+    <div class="card">
+      <h3>Our Promise</h3>
+      <p>Reliable schedules, trusted staff, and an elegant finish every time.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="accent">Referral Partnership</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Earn 10% for Every Client You Refer</h3>
+      <p><strong>Amy’s Aura</strong> is a UK-registered professional cleaning company delivering reliable, high-quality cleaning services across residential, commercial, and short-let properties.</p>
+      <p>We work closely with property maintenance companies, landlords, letting agents, and Airbnb or short-let hosts.</p>
+    </div>
+
+    <div class="card">
+      <h3>What We Specialise In</h3>
+      <p>✔ Airbnb & short-let changeover cleaning<br>
+         ✔ End-of-tenancy & move-out cleans<br>
+         ✔ Deep & one-off cleans<br>
+         ✔ Office & commercial cleaning</p>
+      <p>Our team is flexible, efficient, and happy to travel, ensuring every property is guest-ready and presented to a high standard.</p>
+    </div>
+
+    <div class="card">
+      <h3>How the Referral Works</h3>
+      <p>Refer a new client to Amy’s Aura. Once they complete their first booking, you earn <strong>10% of the booking value</strong>.</p>
+      <p>✔ No complicated terms<br>
+         ✔ Transparent and straightforward<br>
+         ✔ Ideal for ongoing collaborations</p>
+    </div>
+
+    <div class="card">
+      <h3>Why Partner With Us</h3>
+      <p>Reliable, well-organised cleaning team<br>
+         Fast turnaround times<br>
+         High presentation standards<br>
+         Professional communication<br>
+         Available immediately, including urgent and next-day cleans</p>
+      <p><strong>Contact:</strong><br>
+         Japheth – <a href="tel:+447904152313">07904 152313</a><br>
+         David – <a href="tel:+447904152313">07904 152313</a><br>Email – amyscleanaura@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Amy’s Aura Cleaning Services. All rights reserved.
+</footer>
+
+
+<a class="whatsapp-float" href="https://wa.me/447904152313" target="_blank">WhatsApp Us</a>
+
+</body>
+</html>
